@@ -95,7 +95,8 @@ namespace tfs
         out = stderr;
         str = "fail";
       }
-      fprintf(out, fmt, va_arg(args, const char*));
+      // XXX fprintf(out, fmt, va_arg(args, const char*));
+      vfprintf(out, fmt, args );
       fprintf(out, " %s.\n", str);
       va_end(args);
     }
