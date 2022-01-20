@@ -547,6 +547,7 @@ int put_file_ex(const VSTRING& param, const bool unique, const bool is_large)
     }
   }
 
+  printf( "ret_tfs_name : %s \n", ret_tfs_name );
   //printf("tfs_name: %s, ret_tfs_name: %s\n", tfs_name, ret_tfs_name);
   ToolUtil::print_info(ret, "put %s => %s", local_file, tfs_name != NULL ? FSName(tfs_name, suffix).get_name() : ret_tfs_name);
   return ret;
