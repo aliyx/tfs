@@ -264,7 +264,7 @@ static void usage(const char* name)
           "       b) %s -r rcip [-n] [-i] [-h] name meta client interface(with rc). \n"
           "       -s nameserver ip port\n"
           "       -r rcserver ip port\n"
-          "       -n set log level\n"
+          "       -n set log level to ERROR, default is DEBUG\n"
           "       -i directly execute the command\n"
           "       -h help\n",
           name, name);
