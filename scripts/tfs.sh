@@ -221,7 +221,7 @@ check_run()
             exit 1
     esac
 
-    run_pid=`ps -ef | egrep "$grep_cmd" | egrep -v 'egrep' | awk '{print $2}'`
+    run_pid=`ps -ef | grep -E "$grep_cmd" | egrep -v 'grep' | awk '{print $2}'`
 
     if [ `echo "$run_pid" | wc -l` -gt 1 ]
     then

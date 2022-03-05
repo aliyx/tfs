@@ -264,7 +264,7 @@ static void usage(const char* name)
           "       b) %s -r rcip [-n] [-i] [-h] name meta client interface(with rc). \n"
           "       -s nameserver ip port\n"
           "       -r rcserver ip port\n"
-          "       -n set log level\n"
+          "       -n set log level to ERROR, default is DEBUG\n"
           "       -i directly execute the command\n"
           "       -h help\n",
           name, name);
@@ -547,6 +547,7 @@ int put_file_ex(const VSTRING& param, const bool unique, const bool is_large)
     }
   }
 
+  //printf("ret_tfs_name : %s \n", ret_tfs_name );
   //printf("tfs_name: %s, ret_tfs_name: %s\n", tfs_name, ret_tfs_name);
   ToolUtil::print_info(ret, "put %s => %s", local_file, tfs_name != NULL ? FSName(tfs_name, suffix).get_name() : ret_tfs_name);
   return ret;
